@@ -275,7 +275,7 @@ class Page(Container):
             turns = r // 90
             for i in range(turns):
                 x, y = pt
-                comp = self.width if i == turns % 2 else self.height
+                comp = self.root_page.width if i == turns % 2 else self.root_page.height
                 pt = (y, (comp - x))
             return pt
 
